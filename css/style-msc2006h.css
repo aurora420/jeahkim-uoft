@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: #a2d2ff;
+    display: flex; /*header and section side by side*/
+}
+
+body{
+    background: #bde0fe;
+}
+
+/* MSC2006H: Advanced Media*/  
+main header {
+    font-family: "proxima-nova", sans-serif;
+    width: 20%;
+    height: 100%;
+    padding: 10vh 5vw;
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: space-between; /* Space between the elements */
+    position: relative;
+    z-index: 3; /* Higher than section */
+    text-align: left; /* Left-align text */
+}
+
+main header h1 {
+    font-weight: 700;
+    font-style: normal;
+    color: #03045e;
+    margin: 0;
+}
+
+main header p {
+    font-weight: 400;
+    font-size: 1.1vw;
+    color: #7400b8;
+    margin-top: 20px; /* Adjust spacing between h1 and p */
+}
+
+/* Jeah Kim */
+main header address {
+    font: normal 11px/1.4 "proxima-nova", sans-serif;
+    color: #023e8a;
+}
+
+/* External Portfolio Link */
+.portfolio-link {
+    font: normal 18px "proxima-nova", sans-serif;
+    color: #1e60b7; 
+    text-decoration: none; 
+}
+
+main nav {
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    z-index: 3; /*higher than section and aside*/  
+}
+
+main nav ul {
+    display: flex; /*li aligned side by side*/  
+}
+
+main nav ul li a {
+    font-size: 18px;
+    margin-right: 30px;
+}
+
+/* when mouse hovers over the portfolio link */
+.portfolio-link:hover {
+    color: #03045e; 
+}
+
+/* Section */
+main section {
+    width: 80%;
+    height: 100%;
+    padding-top: 15vh;
+    display: flex;
+    position: relative;
+    z-index: 1; /*lower than aside pop-up scene*/ 
+}
+
+main section article {
+    flex: 1; /*identical width for every article*/
+    padding: 70px 40px 100px;
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 1s, flex 1s;
+    cursor: pointer;
+}
+
+main section article .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section article .inner .txt {
+    width: 100%;
+}
+
+main section article .inner .txt h2 {
+    font: normal 2vw/1 "proxima-nova", sans-serif;
+    color: #4361ee;
+    margin-bottom: 40px;
+    padding-top: 70px;
+}
+
+main section article .inner .txt p {
+    font: 14px/1.4 "proxima-nova", sans-serif;
+    margin-bottom: 20px;
+    color: #4361ee;
+}
+
+.select-menu {
+    position: relative;
+    padding: 20px 0;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.select-menu .select-btn {
+    display: flex;
+    height: 40px; 
+    background: #bde0fe;
+    padding: 10px 15px;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.select-menu .options {
+    position: absolute; /* Position the dropdown */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none; /* Initially hidden */
+    z-index: 1; /* Ensure options appear below the button */
+    right: 0; /* Align to the right side of the select button */
+}
+
+.select-menu.active .options {
+    display: block; /* Show the dropdown when active */
+}
+
+.options .option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+
+.options .option:hover {
+    background: #F2F2F2;
+}
+
+.option i {
+    font-size: 18px;
+    color: #333;
+    margin-right: 12px;
+}
+
+/* Position the dropdown right below the <p> tag */
+.select-menu {
+    position: absolute;
+    top: calc(10vh + 5vw); /* Positioned below <p> */
+    left: 20%; /* Align dropdown to the right side of the header */
+    z-index: 4;
+}
+
+/* Align data-content on the right side of the page */
+#section1-content {
+    position: absolute;
+    top: 20vh; /* Top-aligned with the <p> tag (margin-top of <p> is 20px) */
+    left: 70%; /* Align horizontally to the center of the page */
+    transform: translateX(-50%); /* Center the element */
+    width: 50%; /* Adjust width as needed */
+    padding: 20px;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
