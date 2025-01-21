@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header {
+    display: flex;
+    height: 256px;
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+    color: #121348;
+    text-align: center;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #DCDCDC;
+}   
+
+
+main {
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: #FFF;
+}
+
+.row {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 48px;
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.subpage {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.70);
+    position: relative; 
+    overflow: hidden; /* Hide overflow content */
+}
+
+
+.subpage img {
+    display: inline-flex;
+    width: 400px;
+    height: 400px;
+    padding: 0px;
+    border-radius: 32px; 
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    object-fit: cover;  
+}
+
+
+.label-container {
+    display: flex;
+    width: 400px;
+    height: 120px;
+    padding: 32px 18px;
+    align-items: flex-end;
+    justify-content: left; /* Center the text horizontally */
+    gap: 10px;
+    position: absolute; /* Position the text over the image */
+    bottom: 0; /* Align at the bottom of the image */
+    left: 0;
+    right: 0;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 79.5%);
+    color: #FFF; /* Ensure text is visible on the dark background */
+    z-index: 1; /* Make sure it appears on top of the image */
+}
+
+
+.subpage title{
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter, Arial, sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+footer {
+    display: flex;
+    height: 120px;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+    justify-content: center;
+    background: #DCDCDC;
+    font-family: Inter, Arial, sans-serif;
+}
+
+#Exercise1 {
+    display: flex;
+    align-items: right;
+    cursor: pointer;
+    justify-content: space-between;
+    z-index: 2;
+}
