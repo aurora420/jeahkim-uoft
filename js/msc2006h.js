@@ -27,3 +27,21 @@ selectMenus.forEach(menu => {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Get references to the menu options and the Exercise1 link container
+    const options = document.querySelectorAll('.option'); // All dropdown options
+    const exercise1Link = document.getElementById("Exercise1");
+
+    // Add click event listeners to all options
+    options.forEach((option, index) => {
+        option.addEventListener("click", () => {
+            if (index === 1) { // Week 2 (0-based index for the second option)
+                exercise1Link.style.display = "block"; // Show the Exercise1 link
+            } else {
+                exercise1Link.style.display = "none"; // Hide the Exercise1 link for other weeks
+            }
+        });
+    });
+});
