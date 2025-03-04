@@ -44,6 +44,12 @@
                         <p><b>Lecture Notes</b></p>
                         <p id="section1-content"></p>
                     </div>
+
+                    <div class="txt">
+                        <h2>02</h2>
+                        <p><b>Weekly devLog</b></p>
+                        <p id="section2-content"></p>
+
                     <div class="select-menu">
                         <div class="select-btn">
                             <span class="sBtn-text">MSC2006H Advanced Media Notes</span>
@@ -78,9 +84,10 @@
                                 Header and Footer – auto layout> fixed height Fill container for width
                                 <br>
                                 Main – height and width both apply fill container  
-                                                                               
+                                <br>
+                                <br>
+                                <a href='http://127.0.0.1:5500/msc2006h-ex1.html' target='_blank'>Link to exercise1</a>
                                 ">
-                                
                                 <span><b>Week 2: Figma to Website</b> (2025.01.14)</span>                            
                             </li>
 
@@ -133,15 +140,79 @@
 
                                 ">
                                 <span> <b>Week 4: Pre-Production2</b> (2025.01.28)</span>
-
                             </li>
+
+                            <li class="option" data-content="<b>Week 6: Javascript </b>
+                                <br>
+                                <br>
+                                <b>*Link to javascript exercise will be updated soon</b>
+                                <br>
+                                <br>
+                                bug backlog of personal website: dropdown list js should be corrected
+
+                                ">
+                                <span> <b>Week 6: Javascript</b> (2025.02.11)</span>
+                            </li>
+
                         </ul>
 
-                        <div id="Exercise1" style="display: none; text-align: left; margin-top: 20px; margin-left: 10px">
-                            <a href="msc2006h-ex1.html">Link to Exercise1</a>
-                        </div>
+                        <div class="select-menu-devLog">
+                            <!-- Weekly devLog Dropdown -->
+                            <div class="select-menu">
+                                <div class="select-btn">
+                                    <span class="sBtn-text">Weekly devLog</span>
+                                    <i class="bx bx-chevron-down"></i>
+                                    
+                                </div>
+                                <ul class="options">
+                                    <li class="option" data-content="<b>Unity Interface</b>
+                                        <br>
+                                        <br>
+                                        - Hierarchy window >
+    - The [**XR Origin (AR Rig)**](https://docs.unity3d.com/Manual/xr-origin.html) represents the device in space. When the user moves or rotates in the real world, the XR Origin (AR Rig) moves accordingly in the Unity scene. And just like your real device has a camera, the XR Origin (AR Rig) has a **Camera** GameObject attached to it.
+        - The **Camera** (a child of XR Origin (AR Rig)) is the main camera of the AR application and must be set with the **MainCamera** tag. It comes with additional components that allow this camera to work for AR, which you can read about in the [Tracked Pose Driver](https://docs.unity3d.com/Packages/com.unity.xr.legacyinputhelpers@2.1/manual/index.html#tracked-pose-driver), [AR Camera Manager](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/api/UnityEngine.XR.ARFoundation.ARCameraManager.html), and [AR Camera Background](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/api/UnityEngine.XR.ARFoundation.ARCameraBackground.html) documentation. It is recommended that you delete any other cameras in the scene to avoid conflicts.
+    - The [**AR Session**](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/api/UnityEngine.XR.ARFoundation.ARSession.html) manages an individual session of the AR experience, including things like **frame rate and communication** with the device. There can only be **one active AR Session in a scene.**
+                                        ">
+                                        <span><b>Unity Interface</b> (2025.02.07)</span>
+                                    </li>
 
-                    </div>
+
+                                    <li class="option" data-content="<b>Deploy to IOS</b>
+                                        <br>
+                                        <br>
+                                        1. install ARKit
+    1. Project Setting > XR plug-in management > iOS icon > enable apple ar kit
+    2. Project Setting > Player > Name company, project
+        1.  identifier cannot include any spaces or special characters. You can only use upper and lower case letters. If you include any special characters, your app will not build.
+2. File > Build Profiles
+    1. add open scene in the scene list
+    2. select iOS and switch platform
+                                        ">
+                                        <span><b>Deploy to IOS</b> (2025.02.14)</span>
+                                    </li>
+                                    
+                                    <li class="option" data-content="<b>App Logo</b>
+                                        <br>
+                                        <br>
+                                        Edit>Project settings>Splash screen> Logo 
+
+                                        1. image should be converted to 2D sprite. → select original image and convert to sprite in the inspector window. 
+                                        2. Open sprite window > slice > apply
+                                        ">
+                                        <span><b>App Logo</b> (2025.02.14)</span>
+                                    </li>
+
+                                    <li class="option" data-content="<b>Shader Graph</b>
+                                        <br>
+                                        <br>
+                                        To be updated soon!
+                                        ">
+                                        <span><b>Shader Graph</b> (2025.02.14)</span>
+                                    </li>
+
+                            </div>
+                        
+
 
                 </div>
             </article>
