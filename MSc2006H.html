@@ -47,8 +47,9 @@
 
                     <div class="txt">
                         <h2>02</h2>
-                        <p><b>Weekly devLog</b></p>
+                        <p><b>Weekly Dev Diary</b></p>
                         <p id="section2-content"></p>
+                    </div>
 
                     <div class="select-menu">
                         <div class="select-btn">
@@ -146,70 +147,155 @@
                                 <br>
                                 <br>
                                 <b>*Link to javascript exercise will be updated soon</b>
-                                <br>
-                                <br>
-                                bug backlog of personal website: dropdown list js should be corrected
-
+                                
                                 ">
                                 <span> <b>Week 6: Javascript</b> (2025.02.11)</span>
                             </li>
 
+                            <li class="option" data-content="<b>Week 8: Realtime Rendering </b>
+                                <br>
+                                <br>
+                                <b>[Real-time rendering]</b>
+                                <br>* Interactive 3d assets: users can directly interact with them, rotating zooming or directly controlling them 
+                                <br>* Increased efficiency: real time rendering can speed up production as it allows you to see changes in lighting and textures more quickly
+                                <br>* Flexibility in production: Given the reduced time needed for rendering an compositing, it can be simpler and cheaper to make changes
+
+                                <br>
+                                <br>
+                                <b>[Real-time rendering pipeline]</b>
+                                <br>* Treatment, script, thumbnails/concept art, storyboard, animatic/prototype, production
+                                <br>Prototype  (unity, web flow, coding)
+                                <br>Production (unity, Maya, blender)
+                                <br>
+                                <br>
+                                <b>Why do we need to consider real-time rendering</b>
+                                <br>* Model optimized for use case pre-render phase
+                                <br>* Switch using real-time pipeline becoming more cheap 
+                                <br>* YT ’The making of meerkat real time hair and fur short’
+                                <br>* BUT changing the workflow is a huge resource lift. A huge investment is needed.
+                                ">
+                                <span> <b>Week 8: Realtime Rendering</b> (2025.03.04)</span>
+                            </li>
+
                         </ul>
+                    </div>
 
                         <div class="select-menu-devLog">
                             <!-- Weekly devLog Dropdown -->
                             <div class="select-menu">
                                 <div class="select-btn">
-                                    <span class="sBtn-text">Weekly devLog</span>
+                                    <span class="sBtn-text">Weekly Dev Diary</span>
                                     <i class="bx bx-chevron-down"></i>
                                     
                                 </div>
                                 <ul class="options">
-                                    <li class="option" data-content="<b>Unity Interface</b>
+                                    <li class="option" data-content="<b>Website Updates</b>
                                         <br>
                                         <br>
-                                        - Hierarchy window >
-    - The [**XR Origin (AR Rig)**](https://docs.unity3d.com/Manual/xr-origin.html) represents the device in space. When the user moves or rotates in the real world, the XR Origin (AR Rig) moves accordingly in the Unity scene. And just like your real device has a camera, the XR Origin (AR Rig) has a **Camera** GameObject attached to it.
-        - The **Camera** (a child of XR Origin (AR Rig)) is the main camera of the AR application and must be set with the **MainCamera** tag. It comes with additional components that allow this camera to work for AR, which you can read about in the [Tracked Pose Driver](https://docs.unity3d.com/Packages/com.unity.xr.legacyinputhelpers@2.1/manual/index.html#tracked-pose-driver), [AR Camera Manager](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/api/UnityEngine.XR.ARFoundation.ARCameraManager.html), and [AR Camera Background](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.0/api/UnityEngine.XR.ARFoundation.ARCameraBackground.html) documentation. It is recommended that you delete any other cameras in the scene to avoid conflicts.
-    - The [**AR Session**](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.2/api/UnityEngine.XR.ARFoundation.ARSession.html) manages an individual session of the AR experience, including things like **frame rate and communication** with the device. There can only be **one active AR Session in a scene.**
+                                        CSS Script that can make dropdown menu <b>scrollable</b>:
+                                        <br>✨<b>overflow-y: auto;</b>: 
+                                        <br>Adds a vertical scrollbar to the dropdown if the content exceeds the defined max-height.
+                                        <br>✨<b>max-height: 150px;</b>: 
+                                        <br>Sets the maximum height of the dropdown menu.
+                                        ">
+                                        <span><b>Website Updates</b> (2025.02.07)</span>
+                                    </li>
+
+
+
+                                    <li class="option" data-content="<b>Unity Interface in AR project</b>
+                                        <br>
+                                        <br>
+                                        <b>1. Hierarchy window</b>
+                                        <br>
+                                        ✨ <b>XR Origin (AR Rig):</b> represents the device in space. 
+                                        <br>When the user moves or rotates in the real world, the XR Origin (AR Rig) moves accordingly in the Unity scene. 
+                                        Camera (a child of XR Origin) is attached to GameObject, <b>need 'MainCamera' tag.</b>
+                                        <br>[Tracked Pose Driver] component: to update a GameObject’s transform to match that of a tracked device
+                                        <br>[ARTrackedImageManager] component: to detect and track 2D images in the physical environment.
+                                        Only images in reference library will be detected.
+                                        <br>Delete any other cameras in the scene to avoid conflicts.
+                                        <br>
+                                        ✨ <b> AR Session: </b> manages an individual session of the AR experience, including frame rate and communication with the device. 
+                                        <br>There can only be <b>one active AR Session in a scene</b>.
                                         ">
                                         <span><b>Unity Interface</b> (2025.02.07)</span>
                                     </li>
 
 
-                                    <li class="option" data-content="<b>Deploy to IOS</b>
+                                    <li class="option" data-content="<b>Deploy to iOS</b>
                                         <br>
                                         <br>
-                                        1. install ARKit
-    1. Project Setting > XR plug-in management > iOS icon > enable apple ar kit
-    2. Project Setting > Player > Name company, project
-        1.  identifier cannot include any spaces or special characters. You can only use upper and lower case letters. If you include any special characters, your app will not build.
-2. File > Build Profiles
-    1. add open scene in the scene list
-    2. select iOS and switch platform
+                                        <b> 1. Install ARKit</b>
+                                        <br> Project Setting > XR plug-in management > iOS icon > enable apple AR kit
+                                        <br> <b>2. Project setup</b>
+                                        <br> Project Setting > Player > Name company, project
+                                        <br> Identifier cannot include any spaces or special characters. 
+                                        <br> Only upper and lower case letters are acceptable for building projects. 
+                                        <br> <b>3. Build Profiles</b>
+                                        <br> 3-1. add open scene in the scene list
+                                        <br> 3-2. select iOS and switch platform
+                                        <br> <b>4. Build in iPhone: install Xcode</b>
+                                        <br> enable developer mode in iPhone and enroll as apple developer
+                                        <br> select development build in unity>build profiles>platform settings
+                                        <br> 🤔minor&personal troubleshooting: 
+                                        <br> * only official apple cable works for deployment
+                                        <br> * SDK Error: Xcode> setting> Locations> select the command line dropdown menu
                                         ">
-                                        <span><b>Deploy to IOS</b> (2025.02.14)</span>
+                                        <span><b>Deploy to iOS</b> (2025.02.14)</span>
                                     </li>
                                     
                                     <li class="option" data-content="<b>App Logo</b>
                                         <br>
                                         <br>
-                                        Edit>Project settings>Splash screen> Logo 
-
-                                        1. image should be converted to 2D sprite. → select original image and convert to sprite in the inspector window. 
-                                        2. Open sprite window > slice > apply
+                                        Edit>Project settings>Splash screen> upload logo 
+                                        <br>
+                                        1. Image should be converted to <b>2D sprite.</b>
+                                        <br>→ select original image and convert to sprite in the inspector window. 
+                                        <br>2. Open sprite window > slice > apply
                                         ">
                                         <span><b>App Logo</b> (2025.02.14)</span>
                                     </li>
 
-                                    <li class="option" data-content="<b>Shader Graph</b>
+                                    <li class="option" data-content='<b>AR demo ver001 - Image tracking</b>
                                         <br>
                                         <br>
-                                        To be updated soon!
-                                        ">
-                                        <span><b>Shader Graph</b> (2025.02.14)</span>
+                                        🖼️ Best Image for Tracking: 300X300px, High Contrast regardless of color
+                                        <br> ** for iOS: should put actual image size in unity -> this can affect the position/ scale of the 3D model. 
+                                        <br>
+                                        <figure>
+                                          <video src="vid/ARdemo001.mp4" muted loop autoplay playsinline style="width: 33.33%; height: auto; transform: rotate(90deg); margin-left: 150px;"></video>
+                                        </figure>'>
+                                        <span><b>Image Tracking</b> (2025.02.14)</span>
+                                    </li>
+                                    
+                                    <li class="option" data-content="
+                                        <b>AR demo ver001 - Wave motion</b>
+                                        <br><br>
+                                        <b>Strategies for visually convincing waves coming into the island.</b>
+                                        <br>🩵Edge-based foam: When objects are near the surface, foam appears.
+                                        <br>🩵Depth-based transparency: Deeper water becomes more transparent or darker.
+                                        <br>🩵Water depth effects: Helps control color and refraction based on depth.
+                                        <br>🩵Set keyframe in water plane transform position (up and down)
+                                        <br><br>
+                                        🤔<b>Reflection:</b>
+                                        <br> Foam effect where the ocean meets the island should be more obvious.
+                                        <br>Maybe the water plane seems too flat.
+                                        <br> OR still it is a good option as it could attach to the surface of a 3D-printed block. 
+                                        <br>Kind of dizzy looking at it. The looping speed must be lowered down.
+                                        <br><br>
+                                        <figure>
+                                            <video src='vid/ARdemo011.mp4' muted loop autoplay playsinline style='width: 25%; height: auto; transform: rotate(90deg) translateX(-100px); margin-left: 100px; '></video>
+                                        </figure>
+                                    ">
+                                        <span><b>Wave motion</b> (2025.02.14)</span>
                                     </li>
 
+                                    
+                                    
+                                    
+                                        
+                                </ul>
                             </div>
                         
 
