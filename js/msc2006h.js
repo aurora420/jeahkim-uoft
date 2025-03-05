@@ -1,47 +1,59 @@
-// Get all the select menus
-const selectMenus = document.querySelectorAll('.select-menu');
+document.addEventListener("DOMContentLoaded", () => {
+    // Get all select menus
+    const selectMenus = document.querySelectorAll('.select-menu');
 
-selectMenus.forEach(menu => {
-    const btn = menu.querySelector('.select-btn');
-    const options = menu.querySelector('.options');
-    const content = menu.querySelector('.sBtn-text');
+    function closeAllMenus(exceptMenu = null) {
+        selectMenus.forEach(menu => {
+            if (menu !== exceptMenu) {
+                menu.classList.remove("active");
+            }
+        });
+    }
 
-    // Toggle active class to show or hide options
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
+    selectMenus.forEach(menu => {
+        const btn = menu.querySelector('.select-btn');
+        const options = menu.querySelector('.options');
+        const content = menu.querySelector('.sBtn-text');
 
-    // Add event listener to each option inside the dropdown
-    const optionItems = options.querySelectorAll('.option');
-    optionItems.forEach(item => {
-        item.addEventListener('click', () => {
-            // Update the select button text
-            content.textContent = item.textContent;
+        btn.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents event from bubbling up
 
-            // Update the content in the second section (render as HTML)
-            const section2Content = document.getElementById("section1-content");
-            section2Content.innerHTML = item.getAttribute("data-content");
-            
-            // Close the dropdown after selection
-            menu.classList.remove('active');
+            // Check if this menu is already active
+            const isActive = menu.classList.contains("active");
+
+            // Close all menus before opening a new one
+            closeAllMenus();
+
+            // Toggle only the clicked menu
+            if (!isActive) {
+                menu.classList.add("active");
+            }
+        });
+
+        // Handle option selection inside the dropdown
+        options?.querySelectorAll('.option').forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevents event bubbling
+                
+                content.textContent = item.textContent;
+                document.getElementById("section1-content").innerHTML = item.getAttribute("data-content");
+                menu.classList.remove('active');
+            });
         });
     });
-});
 
+    // Close dropdowns when clicking outside
+    document.addEventListener("click", () => {
+        closeAllMenus();
+    });
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Get references to the menu options and the Exercise1 link container
-    const options = document.querySelectorAll('.option'); // All dropdown options
+    // Handle Exercise1 link display logic
+    const options = document.querySelectorAll('.option'); 
     const exercise1Link = document.getElementById("Exercise1");
 
-    // Add click event listeners to all options
     options.forEach((option, index) => {
         option.addEventListener("click", () => {
-            if (index === 1) { // Week 2 (0-based index for the second option)
-                exercise1Link.style.display = "block"; // Show the Exercise1 link
-            } else {
-                exercise1Link.style.display = "none"; // Hide the Exercise1 link for other weeks
-            }
+            exercise1Link.style.display = index === 1 ? "block" : "none"; // Show for "Week 2", hide for others
         });
     });
 });
