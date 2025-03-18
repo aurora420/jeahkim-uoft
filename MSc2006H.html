@@ -177,6 +177,15 @@
                                 <span> <b>Week 8: Realtime Rendering</b> (2025.03.04)</span>
                             </li>
 
+                            <li class="option" data-content="<b>Week 8: Realtime Rendering </b>
+                                <br>
+                                <br>
+                                Alex I am so sorry but I need extension to work on 3d viewer...😭😭😭😭😭
+                                AR project is taking too much time...🫠🫠🫠🫠🫠
+                                ">
+                                <span> <b>Week 9: 3D Web Viewer</b> (2025.03.11)</span>
+                            </li>
+
                         </ul>
                     </div>
 
@@ -288,9 +297,56 @@
                                             <video src='vid/ARdemo011.mp4' muted loop autoplay playsinline style='width: 25%; height: auto; transform: rotate(90deg) translateX(-100px); margin-left: 100px; '></video>
                                         </figure>
                                     ">
-                                        <span><b>Wave motion</b> (2025.02.14)</span>
+                                        <span><b>Wave motion</b> (2025.02.28)</span>
                                     </li>
 
+                                    <li class="option" data-content="
+                                    <b>Hotspot</b><br><br>
+                                    The mission was to make the boat model stop at the position where the user tapped the hotspot once.<br>
+                                    I figured out two solutions but found <b>[Solution 2]</b> to be the better choice, as it stops the boat animation immediately.<br><br>
+                                
+                                    <b>[Solution 1]</b><br>
+                                    1. Created a Stop state in the animation controller.<br>
+                                    2. Set the transition condition from the Moving state to the Stop state based on the StopAnimation trigger.<br><br>
+                                
+                                    * Script: <code>void StopBoatMovement()</code><br>
+                                    if (boatAnimator != null) {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;boatAnimator.SetTrigger('StopAnimation');<br>
+                                    }<br><br>
+                                
+                                    <b>[Solution 2]</b><br>
+                                    * Script: <code>void StopBoatMovement()</code><br>
+                                    if (boatAnimator != null) {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;boatAnimator.speed = 0;<br>
+                                    }<br>
+                                ">                                             
+                                        <span><b>Hotspot</b> (2025.03.11)</span>
+                                    </li>
+
+                                    <li class="option" data-content="
+                                    <b>Drag&Drop</b><br><br>
+                                    The mission was to make drag and drop game for Mangrove minigame. 
+                                    <br> 
+                                    <b>What I learned:</b>
+                                    <br> 1. For UI images under a Canvas, you don’t need a Rigidbody, 
+                                    <br>and instead, you can manipulate the RectTransform to move the image.
+                                    <br> 2. OnDrag: This method gets called during the drag operation. 
+                                    <br> The PointerEventData provides information about the touch or pointer position, 
+                                    <br>and you can use it to update the position of the object being dragged.
+                                    <br> 3. OnEndDrag: This method is called when the user finishes dragging (releases the touch or pointer).
+                                    ">                                             
+                                        <span><b>Drag&Drop</b> (2025.03.18)</span>
+                                    </li>
+                                    
+                                    <li class="option" data-content="
+                                    <b>Import Animation</b><br><br>
+                                    One of our teammate shared 2D animation file as .mov format. However, Unity does not support .mov format, 
+                                    and should be coverted to mp4. However, mp4 format does not have alpha property, 
+                                    <br> so it cannot export animation with transparent background. I learned the 2D animation should be 
+                                    <br> prepared as png sequences on the sprite sheet. So I can convert the sprite sheet and slice them in Unity. 
+                                    ">                                             
+                                        <span><b>Import Animation</b> (2025.03.18)</span>
+                                    </li>
                                     
                                     
                                     
