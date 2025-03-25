@@ -40,15 +40,7 @@
             <article>
                 <div class="inner">
                     <div class="txt">
-                        <h2>01</h2>
-                        <p><b>Lecture Notes</b></p>
                         <p id="section1-content"></p>
-                    </div>
-
-                    <div class="txt">
-                        <h2>02</h2>
-                        <p><b>Weekly Dev Diary</b></p>
-                        <p id="section2-content"></p>
                     </div>
 
                     <div class="select-menu">
@@ -146,8 +138,7 @@
                             <li class="option" data-content="<b>Week 6: Javascript </b>
                                 <br>
                                 <br>
-                                <b>*Link to javascript exercise will be updated soon</b>
-                                
+                                <a href='http://127.0.0.1:5500/msc2006h-ex1.html' target='_blank'>Link to exercise2</a>
                                 ">
                                 <span> <b>Week 6: Javascript</b> (2025.02.11)</span>
                             </li>
@@ -177,11 +168,11 @@
                                 <span> <b>Week 8: Realtime Rendering</b> (2025.03.04)</span>
                             </li>
 
-                            <li class="option" data-content="<b>Week 8: Realtime Rendering </b>
+                            <li class="option" data-content="<b>Week 9: 3D Web Viewer</b>
                                 <br>
                                 <br>
-                                Alex I am so sorry but I need extension to work on 3d viewer...😭😭😭😭😭
-                                AR project is taking too much time...🫠🫠🫠🫠🫠
+                                <a href='http://127.0.0.1:5500/msc2006h-ex3.html' target='_blank'>Link to exercise 3 - sketchfab</a>
+                                <br><a href='#' target='_blank'>Link to exercise 3 - Michael</a>
                                 ">
                                 <span> <b>Week 9: 3D Web Viewer</b> (2025.03.11)</span>
                             </li>
@@ -339,17 +330,116 @@
                                     </li>
                                     
                                     <li class="option" data-content="
+                                    <b>Drag&Drop after User Test</b><br><br>
+                                    At the end of the game, the user should see the 'complete sign' when all the draggables
+                                    <br>are placed in the correct drop placeholders. Initially, I made the 'complete sign' appear
+                                    <br>when the number of completed items >= the total number of draggables. However, during the
+                                    <br>user testing with our teammates, the sign appeared every time they moved the draggable to 
+                                    <br>the correct spot from the second play onward. I realized the problem was that the 
+                                    <br>'complete sign' was not reset after the game. So, I added a count reset function so it 
+                                    <br> counts for each play instead of the entire time.
+                                    <br><br>
+                                    Reflection: I once again realized the importance of user testing.🙏">                                             
+                                        <span><b>Drag&Drop after User Test</b> (2025.03.25)</span>
+                                    </li>
+
+                                    <li class="option" data-content="
                                     <b>Import Animation</b><br><br>
                                     One of our teammate shared 2D animation file as .mov format. However, Unity does not support .mov format, 
                                     and should be coverted to mp4. However, mp4 format does not have alpha property, 
                                     <br> so it cannot export animation with transparent background. I learned the 2D animation should be 
                                     <br> prepared as png sequences on the sprite sheet. So I can convert the sprite sheet and slice them in Unity. 
+                                    <br> <br><br> <br>
+                                    <b>Import MP4 in UI/Canvas</b><br><br>
+                                    Step1: Import mp4 file in Unity<br>
+                                    Step2: Create a Render Texture<br>
+                                    Step3: Create a Raw Image in the Canvas (Right-click in the Hierarchy window)<br>
+                                    Step4: Assign the Render Texture to the Raw Image<br>
+                                    Step5: Create an empty object and add VideoPlayer component in the inspector<br>
+                                    Step6: Assign the Render Texture to the Target Texture in the VideoPlayer component<br>
                                     ">                                             
                                         <span><b>Import Animation</b> (2025.03.18)</span>
                                     </li>
                                     
+                                    <li class="option" data-content="
+                                    <b>Slider Mini-Game</b><br><br>
+                                    Reflection: When I attached png image file of boat to the slider, the transition was much smoother,
+                                    <br> and no delay. If the 2D assets were given as a sprite format (or even an animation with 
+                                    <br> limited number of frames - like less than 10), I could have tried smooth animation transition
+                                    <br> along with the boat movement. However, to achieve the subtleness of the given animation from the 
+                                    <br> designer team, the frame was over 100 and even 900 frames, and it was not applicable to slice each of
+                                    <br>them to sprite format by myself given the short period of time. So we decided to connect the slider 
+                                    <br>with the mp4 animation, using the slider as the youtube timeline. When the user slides, the whole 
+                                    <br>embedded animation plays forward, but pause when user let go the knob of the slider, and plays backward when
+                                    <br> the user slides back. After hitting the end, the user could see the complete sign.
+                                    <br>It was a good solution given the short period of time, but the transition was not smooth enough.
+                                    <br>I was worried if the user just slide too fast and only able to see the start and the end frame, 
+                                    <br>so I added timestamp like design element on the slider, so that user uncounciously think they might have
+                                    <br>to slide until the steps indicated, instead of sliding it all the way to the end.
+                                    <br>Also, this design has a merit that the user can expect what to observe during the mini-game, such as 
+                                    <br>they can see the boat releasing the trash and oil, polluting the ocean, and collecting fish and coral,
+                                    <br> which also negatively affect the ocean ecosystem. Before the timestamp addition, because of the 
+                                    <br>limited screen size, and the color choice was a bit dark (no salient elements other than the boat), 
+                                    <br>it was not obvious what the user should expect. The timestamp idea was first to hide the lagging 
+                                    <br>problem, but I believe it also improved the user understanding of the content. 
+                                    ">
+                                        <span><b>Slider Mini-Game</b> (2025.03.25)</span>
+                                    </li>
+
+                                
+
+                                    <li class="option" data-content="
+                                    <b>Wave Control Strategy Pt.1</b><br><br>
+                                    <figure>
+                                        <img src='img/waveControl.png' style='width: 75%; '></img>
+                                    </figure>
+                                ">    
+                                    <span><b>Wave Control Strategy Pt.1</b> (2025.03.25)</span>
+                                    </li>
                                     
+                                    <li class="option" data-content="
+                                    <b>Wave Control Strategy Pt.2</b><br><br>
+                                    <figure>
+                                        <img src='img/waveControl2.png' style='width: 75%; '></img>
+                                    </figure>
+                                ">    
+                                    <span><b>Wave Control Strategy Pt.2</b> (2025.03.25)</span>
+                                    </li>
                                     
+
+                                    <li class="option" data-content="
+                                    <b>Wave Control Strategy Pt.3</b><br><br>
+                                    Materials are always blended. The final solution was to separate the layers and set the layer weight 
+                                    <br>differently to toggle between the two layers. Instead of transitioning between two statuses, 
+                                    <br>I can just switch the layer weight by using the 'animator name.SetLayerWeight(layer number, opacity)' function.
+                                    <br><br> * One minor problem was the blinking effect of the hotspot was detected unstable. Sometimes it blinks, sometimes it doesn't.
+                                    Next step would be to figure out how to make the hotspot blink more stable.
+                                ">    
+                                    <span><b>Wave Control Strategy Pt.3</b> (2025.03.25)</span>
+                                    </li>
+
+                                    <li class="option" data-content="
+                                    <b>Wave Control Strategy Final</b><br><br>
+                                    Reflection: It was hard to know which format I should ask for the wave models.
+                                    <br> I ended up receiving 4 different wave models with different combinations of wave and material.
+                                    <br> I figured it out normally <b>multiple animations can be baked in a single model.</b>
+                                    <br> This means that instead of creating separate models for each animation, 
+                                    <br> animators can include all the animations in one model and use Unity's Animator Controller 
+                                    <br> to switch between them. This approach is more efficient and reduces the number of assets needed.
+                                    <br> However, now I know the process, I can extract the animation and also know how to control layers
+                                    <br> I expect the workflow and communication with 3D modelers would be much efficient next time.
+                                ">    
+                                    <span><b>Wave Control Strategy Final</b> (2025.03.25)</span>
+                                    </li>
+
+                                    <li class="option" data-content="
+                                    <b>Live Demo Prep</b><br><br>
+                                    <figure>
+                                        <video src='vid/LiveDemo.mov' loop autoplay playsinline style='width: 75%; height: auto; translateX(-100px); margin-left: 50px; '></video>
+                                    </figure>
+                                ">
+                                    <span><b>Live Demo Prep</b> (2025.03.25)</span>
+                                </li>
                                         
                                 </ul>
                             </div>
