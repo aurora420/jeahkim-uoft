@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body { 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: sky linear 20s infinite;
+}
+
+h1 { 
+    width: 1000px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,150%);    
+    font: 92px/1 "proxima-nova", sans-serif; 
+    color: #200f47;
+    text-align: center; 
+    animation: day linear 20s infinite;
+}
+
+main { 
+    width: 1000px; 
+    height: 400px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-70%); 
+    background: #6aa5ff;
+}
+
+/* New Styles for img-container and sketchfab-embed-wrapper */
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sketchfab-embed-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Position the link at the bottom and stretch across the container */
+.sketchfab-embed-wrapper p {
+    position: absolute;
+    bottom: 10px; /* Adjust the bottom spacing */
+    left: 0;
+    width: 200px;
+    text-align: left;
+    margin: 0;
+}
+
+.sketchfab-embed-wrapper a {
+    display: block;
+    width: 200px;
+    text-align: left;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(48, 21, 167, 0.5); /* Optional: Background color for readability */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sketchfab-embed-wrapper a:hover {
+    background-color: rgba(48, 21, 167, 0.8);
+}

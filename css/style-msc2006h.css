@@ -117,27 +117,11 @@ main section article .inner {
     flex-wrap: wrap;
 }
 
-main section article .inner .txt {
-    width: 100%;
-}
-
-main section article .inner .txt h2 {
-    font: normal 2vw/1 "proxima-nova", sans-serif;
-    color: #4361ee;
-    margin-bottom: 40px;
-    padding-top: 70px;
-}
-
-main section article .inner .txt p {
-    font: 14px/1.4 "proxima-nova", sans-serif;
-    margin-bottom: 20px;
-    color: #4361ee;
-}
-
 .select-menu {
     position: relative;
     width: 300px;
     padding: 20px 0;
+    align-items: center;
     font-family: "proxima-nova", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -164,6 +148,8 @@ main section article .inner .txt p {
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    max-height: 150px; /* Set a fixed height for the dropdown */
+    overflow-y: auto;  /* Enable vertical scrolling if content overflows */
     display: none; /* Initially hidden */
     z-index: 2; /* Ensure options appear below the button */
     right: 0; /* Align to the right side of the select button */
@@ -173,21 +159,15 @@ main section article .inner .txt p {
     display: block; /* Show the dropdown when active */
 }
 
-.select-menu-devLog {
-    position: relative;
-    margin-top: 10px;
-    left:0;
+.select-menu-devLog .select-menu {
+    position: absolute;
+    width: 300px;
+    top:500px;
     padding: 20px 0;
+    align-items: center;
     font-family: "proxima-nova", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    align-items: center; /* Ensure vertical alignment */
-    z-index: 1;
-}
-
-.select-menu-devLog .select-menu {
-    position: relative;
-    left:0;
 }
 
 .select-menu-devLog .options {
@@ -197,8 +177,10 @@ main section article .inner .txt p {
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    max-height: 150px; /* Set a fixed height for the dropdown */
+    overflow-y: auto;  /* Enable vertical scrolling if content overflows */
     display: none; /* Initially hidden */
-    right: 0; /* Align to the right side of the select button */
+    left: 0; /* Align to the right side of the select button */
 }
 
 
